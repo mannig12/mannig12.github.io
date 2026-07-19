@@ -51,6 +51,297 @@
         }
 
         section {
+            padding: 100px 5% 80px 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Главный экран с фоновым видео */
+        #hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 5%;
+            overflow: hidden;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+            background: #111; /* Заглушка, пока не загрузится видео */
+        }
+
+        .hero-video-bg iframe {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 соотношение */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.4; /* Затемнение видео для читаемости текста */
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 1;
+            margin: 0 0 20px 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ddd;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Сетка видео-работ */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            width: 100%;
+        }
+
+        .video-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            background-color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .work-role {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Бренды */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        .brand-name {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Обо мне */
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #ccc;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Контакты */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        footer {
+            padding: 40px 5%;
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none; /* Скрываем меню на мобильных для чистоты, можно добавить иконку позже */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#hero">МАГОМЕД ГАДЖИЕВ</a>
+        <nav>
+            <a href="#works">Работы</a>
+            <a href="#about">Обо мне</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-video-bg">
+            <!-- Сюда вставьте ID вашего шоурила для фонового видео. Параметры background=1 убирают звук и элементы управления -->
+            <iframe src="https://player.vimeo.com/video/ВАШ_ID_ВИДЕО?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <h1>Магомед<br>Гаджиев</h1>
+        <div class="subtitle">Режиссер / Креативный продюсер</div>
+    </section>
+
+    <section id="works">
+        <h2>Избранные проекты</h2>
+        <div class="video-grid">
+            
+            <!-- Проект 1 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ВАШ_ID_ВИДЕО" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="work-title">д/с Русские народные: вся правда о сказках</div>
+                <div class="work-role">Режиссер / Креативный продюсер · 2025</div>
+            </div>
+
+            <!-- Проект 2 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ВАШ_ID_ВИДЕО" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="work-title">Кама FORZA</div>
+                <div class="work-role">Режиссер / Креатив · 2024</div>
+            </div>
+
+            <!-- Проект 3 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ВАШ_ID_ВИДЕО" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="work-title">Ma vie clinique</div>
+                <div class="work-role">Режиссер / Продюсер · 2024</div>
+            </div>
+
+            <!-- Проект 4 -->
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ВАШ_ID_ВИДЕО" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="work-title">д/с История русского секса</div>
+                <div class="work-role">Исполнительный продюсер · 2026</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="brands">
+        <h2>Сотрудничество</h2>
+        <div class="brands-grid">
+            <div class="brand-name">Сбер</div>
+            <div class="brand-name">ОККО</div>
+            <div class="brand-name">Уралхим</div>
+            <div class="brand-name">Tekta Group</div>
+            <div class="brand-name">Группа НЭК</div>
+            <div class="brand-name">Robber Baron</div>
+            <div class="brand-name">Ma vie Clinique</div>
+            <div class="brand-name">Кортрос</div>
+            <div class="brand-name">КАМА</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Обо мне</h2>
+        <div class="about-text">
+            <p>Продюсер видеопродакшна с опытом управления проектами в рекламе и документальных сериалах. Вёл полный цикл производства: от концепции до финальной сдачи клиенту и платформе.</p>
+            <p>Особое внимание уделяю проектам с ИИ-анимацией и интеграции сложных CGI/VFX элементов. Твердо уверен, что фундаментальная наука и качественный видеопродакшн должны пересекаться с реальным производством и бизнесом.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Связь</h2>
+        <div class="contact-links">
+            <a href="mailto:mannigmovie@gmail.com">mannigmovie@gmail.com</a>
+            <a href="tel:+79670085003">+7 (967) 008 50 03</a>
+        </div>
+        <div class="social-links">
+            <a href="https://vimeo.com/mannig" target="_blank">Vimeo</a>
+            <a href="https://t.me/mannig21" target="_blank">Telegram</a>
+            <a href="https://www.kinopoisk.ru/name/10202247/" target="_blank">Кинопоиск</a>
+            <a href="https://okko.tv/person/magomed-gadzhiev" target="_blank">Okko</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Магомед Гаджиев
+    </footer>
+
+</body>
+</html>            padding: 40px 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        section {
             padding: 120px 5% 80px 5%;
             min-height: 50vh;
             display: flex;
