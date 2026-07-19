@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Gadzhiev | Director & Producer</title>
+    <!-- Подключаем Bebas Neue и Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-info">
             <h1 class="logo" data-i18n="name">МАГОМЕД ГАДЖИЕВ</h1>
-            <h2 class="roles" data-i18n="roles">Режиссер / Креативный продюсер</h2>
+            <h2 class="roles" data-i18n="roles">РЕЖИССЕР / КРЕАТИВНЫЙ ПРОДЮСЕР</h2>
         </div>
         <div class="header-controls">
             <button id="lang-switch">EN</button>
         </div>
     </header>
 
+    <!-- Стилизованные фильтры -->
     <nav class="filters">
-        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Все проекты</button>
-        <button class="filter-btn" data-filter="narrative" data-i18n="filter_narrative">Кино и Сериалы</button>
-        <button class="filter-btn" data-filter="commercial" data-i18n="filter_commercial">Реклама</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">ALL PROJECTS</button>
+        <button class="filter-btn" data-filter="commercial" data-i18n="filter_commercial">COMMERCIAL</button>
+        <button class="filter-btn" data-filter="narrative" data-i18n="filter_narrative">NARRATIVE</button>
     </nav>
 
     <main>
+        <!-- Сетка проектов с правильным порядком -->
         <section class="video-grid" id="video-grid">
             
+            <!-- 1. Robber Baron (Commercial) -->
             <div class="video-item" data-category="commercial">
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1210736613" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -36,90 +40,15 @@
                 <h3 class="video-title">Robber Baron - Space</h3>
             </div>
 
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1018337463" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">Mavie Clinique</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016744383" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">Kama Quadro</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016743668" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">Forza</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1018323172" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">Viatti Strada</h3>
-            </div>
-
+            <!-- 2. Русские народные (Narrative) -->
             <div class="video-item" data-category="narrative">
                 <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1018326203" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <video src="Русские%20народные%20-%20вся%20правда%20о%20сказках.mp4" controls style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></video>
                 </div>
-                <h3 class="video-title">That's life - Short film</h3>
+                <h3 class="video-title">Русские народные: вся правда о сказках</h3>
             </div>
 
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1018318546" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">DBX</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016739710" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">Kortros - OZON</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016739378" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">HEADLINER</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016732170" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">TEKTA. ENITEO</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016741854" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">TEKTA. NOW</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1016732935" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">TEKTA. EVER</h3>
-            </div>
-
-            <div class="video-item" data-category="commercial">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ed1dJSh6Efc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-title">На крючке: когда звонит мошенник</h3>
-            </div>
-
+            <!-- 3. История русского секса (Narrative) -->
             <div class="video-item" data-category="narrative">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/Mf7ygr8epf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -127,47 +56,138 @@
                 <h3 class="video-title">История русского секса</h3>
             </div>
 
+            <!-- 4. That's life (Narrative) -->
             <div class="video-item" data-category="narrative">
                 <div class="video-wrapper">
-                    <video src="skazki.mp4" controls style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></video>
+                    <iframe src="https://player.vimeo.com/video/1018326203" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <h3 class="video-title">Русские народные: вся правда о сказках</h3>
+                <h3 class="video-title">That's life - Short film</h3>
+            </div>
+
+            <!-- 5. Mavie clinique (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1018337463" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">Mavie Clinique</h3>
+            </div>
+
+            <!-- 6. Kama Quadro (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016744383" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">Kama Quadro</h3>
+            </div>
+
+            <!-- 7. Forza (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016743668" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">Forza</h3>
+            </div>
+
+            <!-- 8. Viatti Strada (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1018323172" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">Viatti Strada</h3>
+            </div>
+
+            <!-- 9. DBX (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1018318546" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">DBX</h3>
+            </div>
+
+            <!-- 10. Kortros - OZON (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016739710" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">Kortros - OZON</h3>
+            </div>
+
+            <!-- 11. HEADLINER (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016739378" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">HEADLINER</h3>
+            </div>
+
+            <!-- 12. TEKTA. ENITEO (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016732170" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">TEKTA. ENITEO</h3>
+            </div>
+
+            <!-- 13. TEKTA. NOW (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016741854" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">TEKTA. NOW</h3>
+            </div>
+
+            <!-- 14. TEKTA. EVER (Commercial) -->
+            <div class="video-item" data-category="commercial">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1016732935" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">TEKTA. EVER</h3>
+            </div>
+
+            <!-- 15. На крючке: когда звонит мошенник (Narrative) -->
+            <div class="video-item" data-category="narrative">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ed1dJSh6Efc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="video-title">На крючке: когда звонит мошенник</h3>
             </div>
 
         </section>
 
+        <!-- Раздел Обо мне -->
         <section class="about-section">
             <div class="about-container">
                 <h2 class="section-title" data-i18n="about_title">ОБО МНЕ</h2>
-                <p data-i18n="about_text" class="about-description">Веду полный цикл производства: от концепции и брифа до финальной сдачи клиенту и платформе. Работал с OKKO, СБЕР, Кортрос, Tekta Group, ведущими рекламными агентствами и продакшнами. Управляю большими командами и крупными бюджетами. Специализируюсь на координации проектов с высоким объёмом CGI/VFX и параллельных производственных процессов. Создаю полностью основанные на искусственном интеллекте анимационные, художественные и рекламные проекты. Мои работы участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).</p>
+                <p data-i18n="about_text" class="about-description">Веду полный цикл производства: от концепции и брифа до финальной сдачи клиенту и платформе. Работал с OKKO, СБЕР, Кортрос, Tekta Group, ведущими рекламными агентствами и продакшнами. Управляю большими командами и крупными бюджетами. Специализируюсь на координации проектов с высоким объёмом CGI/VFX. Мои проекты — это исключительно ИИ-анимация без натурных съемок, обеспечивающая связь передовых технологий с реальным производством и бизнесом. Работы участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).</p>
                 
-                <h3 class="clients-title" data-i18n="clients_title">С КЕМ Я РАБОТАЛ</h3>
-                <div class="clients">
-                    <img src="sber.png" class="white-logo" alt="Sber">
-                    <img src="okko.png" class="white-logo" alt="OKKO">
-                    <img src="kortros.png" class="white-logo" alt="Kortros">
-                    <img src="tekta.png" class="white-logo" alt="Tekta">
-                    <img src="robber-baron.png" class="white-logo" alt="Robber Baron">
-                    <img src="kama.png" class="white-logo" alt="KAMA">
-                    <img src="uralchem.png" class="white-logo" alt="Uralchem">
+                <h3 class="clients-title" data-i18n="clients_title">КЛИЕНТЫ</h3>
+                <!-- Логотипы в стиле Movie Credits -->
+                <div class="clients-grid">
+                    <img src="sber.png" class="credit-logo" alt="Sber">
+                    <img src="okko.png" class="credit-logo" alt="OKKO">
+                    <img src="kortros.png" class="credit-logo" alt="Kortros">
+                    <img src="tekta.png" class="credit-logo" alt="Tekta">
+                    <img src="robber-baron.png" class="credit-logo" alt="Robber Baron">
+                    <img src="kama.png" class="credit-logo" alt="KAMA">
+                    <img src="uralchem.png" class="credit-logo" alt="Uralchem">
+                    <img src="nek.png" class="credit-logo" alt="NEK">
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <h2 class="footer-heading" data-i18n="footer_heading">СВЯЗАТЬСЯ</h2>
-            <div class="big-contacts">
-                <a href="mailto:mannigmovie@gmail.com" class="big-link">mannigmovie@gmail.com</a>
-                <a href="https://t.me/mannig21" target="_blank" class="big-link">t.me/mannig21</a>
-            </div>
-            
-            <div class="social-pills">
-                <a href="https://vimeo.com/mannig" target="_blank" class="pill">Vimeo</a>
-                <a href="https://www.kinopoisk.ru/name/10202247/" target="_blank" class="pill">Кинопоиск</a>
-                <a href="https://okko.tv/person/magomed-gadzhiev" target="_blank" class="pill">OKKO</a>
-            </div>
+    <!-- Строгий Footer в швейцарском стиле -->
+    <footer class="site-footer">
+        <div class="footer-column">
+            <span class="footer-label" data-i18n="footer_contact">CONTACTS</span>
+            <a href="mailto:mannigmovie@gmail.com" class="footer-link">MANNIGMOVIE@GMAIL.COM</a>
+            <a href="https://t.me/mannig21" target="_blank" class="footer-link">T.ME/MANNIG21</a>
+        </div>
+        <div class="footer-column">
+            <span class="footer-label" data-i18n="footer_social">SOCIAL</span>
+            <a href="https://vimeo.com/mannig" target="_blank" class="footer-link">VIMEO</a>
+            <a href="https://www.kinopoisk.ru/name/10202247/" target="_blank" class="footer-link">KINOPOISK</a>
+            <a href="https://okko.tv/person/magomed-gadzhiev" target="_blank" class="footer-link">OKKO</a>
         </div>
     </footer>
 
