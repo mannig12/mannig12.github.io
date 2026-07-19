@@ -5,36 +5,392 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магомед Гаджиев | Режиссер и Креативный продюсер</title>
     <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #f0f0f0;
-            --accent-color: #555;
-        }
-        
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+        }
+
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --gray: #888888;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
+            line-height: 1.4;
         }
 
         a {
-            color: var(--text-color);
+            color: var(--text);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         a:hover {
-            color: var(--accent-color);
+            color: var(--gray);
         }
 
+        /* Шапка */
         header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 40px 5%;
+            padding: 30px 40px;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero-bg iframe {
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+        }
+
+        .hero-titles h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .hero-titles p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Сетка проектов */
+        .works-section {
+            padding: 80px 40px;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 40px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Пропорция 16:9 */
+            background-color: #111;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-info h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .project-info span {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Раздел Обо мне */
+        .about-section {
+            padding: 100px 40px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            border-top: 1px solid #222;
+        }
+
+        .about-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            background-color: #222;
+            margin-bottom: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Подвал / Контакты */
+        footer {
+            padding: 80px 40px 40px;
+            border-top: 1px solid #222;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info a {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .socials {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            margin-top: 100px;
+            font-size: 0.8rem;
+            color: var(--gray);
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 900px) {
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-section, footer {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Магомед Гаджиев</a>
+        <nav>
+            <a href="#works">РАБОТЫ</a>
+            <a href="#about">ОБО МНЕ</a>
+            <a href="#contact">КОНТАКТЫ</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <!-- Фоновое видео (Шоурил). background=1 убирает звук и интерфейс -->
+            <iframe src="https://player.vimeo.com/video/ID_ФОНОВОГО_ВИДЕО?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="hero-titles">
+            <h1>Магомед Гаджиев</h1>
+            <p>Режиссер / Креативный продюсер</p>
+        </div>
+    </section>
+
+    <section id="works" class="works-section">
+        <div class="works-grid">
+            
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>д/с Русские народные: вся правда о сказках</h3>
+                    <span>Режиссер / Креативный продюсер · 2025</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>д/с История русского секса</h3>
+                    <span>Исполнительный продюсер · 2026</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Кама FORZA</h3>
+                    <span>Режиссер / Креатив · 2024</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Ma vie clinique</h3>
+                    <span>Режиссер / Продюсер · 2024</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>СБЕР</h3>
+                    <span>Коммерческий проект</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>ОККО</h3>
+                    <span>Специальный проект</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>УРАЛХИМ</h3>
+                    <span>Корпоративный фильм</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/ID_ВИДЕО?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>ФЕСТИВАЛЬ «САДЫ И ОГОРОДЫ»</h3>
+                    <span>Промо ролик</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-title">ОБО МНЕ</div>
+        <div>
+            <!-- Если есть прямая ссылка на фото, вставьте её вместо image.jpg -->
+            <!-- <div class="about-photo"><img src="image.jpg" alt="Магомед Гаджиев"></div> -->
+            
+            <div class="about-content">
+                <p>Продюсер видеопродакшна с 6+ годами опыта в рекламе и документальных сериалах[cite: 1]. Вёл полный цикл производства: от разработки концепции до финальной сдачи клиенту и платформе[cite: 1].</p>
+                
+                <p>Управляю командами до 30 человек и крупными бюджетами[cite: 1]. Мой профессиональный фокус направлен на интеграцию сложной компьютерной графики[cite: 1]. Важно отметить: мои проекты полностью строятся на ИИ-анимации, без использования натурных съемок.</p>
+                
+                <p>Я убежден, что фундаментальная наука и современные видеотехнологии должны напрямую пересекаться с реальным производством и бизнесом, решая конкретные задачи.</p>
+
+                <p>Мои проекты участвовали и побеждали на фестивалях Original+ Doc, «Пилот», «Послание к человеку» и WOW awards[cite: 1].</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-title">КОНТАКТЫ</div>
+        <div class="contact-info">
+            <a href="mailto:mannigmovie@gmail.com">mannigmovie@gmail.com</a>
+            <a href="tel:+79670085003">+7 (967) 008 50 03</a>
+            
+            <div class="socials">
+                <a href="https://vimeo.com/mannig" target="_blank">Vimeo</a>
+                <a href="https://t.me/mannig21" target="_blank">Telegram</a>
+                <a href="https://www.kinopoisk.ru/name/10202247/" target="_blank">Кинопоиск</a>
+                <a href="https://okko.tv/person/magomed-gadzhiev" target="_blank">Okko</a>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Магомед Гаджиев[cite: 1]</div>
+    </footer>
+
+</body>
+</html>            padding: 40px 5%;
             position: fixed;
             width: 90%;
             top: 0;
