@@ -9,7 +9,7 @@ const translations = {
         title_sex: "История русского секса",
         title_scam: "На крючке: когда звонит мошенник",
         about_title: "ОБО МНЕ",
-        about_text: "Веду полный цикл производства: от концепции и брифа до финальной сдачи клиенту. Работал с OKKO, СБЕР, Кортрос, Tekta Group, ведущими рекламными агентствами и продакшнами. Управляю большими командами и крупными бюджетами. Специализируюсь на координации проектов с высоким объёмом CGI/VFX. Мои проекты — это исключительно ИИ-анимация без натурных съемок, обеспечивающая связь передовых технологий с реальным производством и бизнесом. Работы участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).",
+        about_text: "Веду полный цикл производства: от концепции и брифа до финальной сдачи клиенту. Работал с OKKO, СБЕР, Кортрос, Tekta Group, ведущими рекламными агентствами и продакшнами. Управляю большими командами и крупными бюджетами. Специализируюсь на координации проектов с высоким объёмом компьютерной графики и визуальных эффектов и параллельных производственных процессов. Создаю проекты, где всё — ИИ-анимация, а не реальные съемки, и где фундаментальная наука пересекается с реальным производством и бизнесом. Мои работы участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).",
         clients_title: "КЛИЕНТЫ",
         footer_contact: "КОНТАКТЫ",
         footer_social: "СОЦСЕТИ"
@@ -24,7 +24,7 @@ const translations = {
         title_sex: "History of Russian Sex",
         title_scam: "On the Hook: When a Scammer Calls",
         about_title: "ABOUT ME",
-        about_text: "I lead full-cycle production from concept and brief to final delivery. Selected clients include OKKO, SBER, Kortros, Tekta Group, and leading creative agencies. I manage large teams and major budgets, specializing in complex CGI/VFX pipelines. My work focuses entirely on AI animation without live-action shooting, bridging cutting-edge technology with real production and business. Projects have been featured and awarded at festivals including Original+ Doc, Pilot, Message to Man, and WOW Awards.",
+        about_text: "I lead full-cycle production: from concept and brief to final delivery. Selected clients include OKKO, SBER, Kortros, Tekta Group, along with leading creative agencies and production companies. I manage large teams and major budgets. I specialize in the coordination of projects with a high volume of computer graphics and visual effects, and complex parallel production pipelines. I create projects where everything is AI animation, not live-action filming, and where fundamental science intersects with real production and business. My work has been featured and awarded at festivals including Original+ Doc, Pilot, Message to Man, and WOW Awards.",
         clients_title: "CLIENTS",
         footer_contact: "CONTACTS",
         footer_social: "SOCIAL"
