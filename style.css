@@ -1,32 +1,48 @@
 :root {
-    --bg-color: #050505;
+    --bg-color: #0d0d0d;
     --text-main: #ffffff;
     --text-muted: #777777;
 }
 
 body {
-    background-color: var(--bg-color);
+    /* Радиальный градиент: от светлого центра к черным краям */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    background-attachment: fixed;
     color: var(--text-main);
     font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    position: relative;
 }
 
-/* Шапка сайта */
+/* Эффект пленочного шума */
+.film-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 5%;
-    background: var(--bg-color);
+    position: relative;
     z-index: 100;
 }
 
 .header-info .logo {
     margin: 0;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 42px;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     line-height: 1;
@@ -47,7 +63,7 @@ header {
     color: var(--text-muted);
     cursor: pointer;
     font-size: 16px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
     transition: color 0.3s ease;
 }
@@ -56,11 +72,12 @@ header {
     color: var(--text-main);
 }
 
-/* Фильтры (строгий текст) */
 .filters {
     padding: 20px 5% 60px 5%;
     display: flex;
     gap: 30px;
+    position: relative;
+    z-index: 100;
 }
 
 .filter-btn {
@@ -87,21 +104,19 @@ header {
     border-bottom: 1px solid var(--text-main);
 }
 
-/* Сетка видео и эффект затемнения */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     gap: 50px;
     padding: 0 5% 100px 5%;
-    transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
-/* При наведении на саму сетку затемняем все видео */
 .video-grid:hover .video-item {
     opacity: 0.3;
 }
 
-/* Возвращаем яркость только тому видео, на которое навели курсор */
 .video-grid .video-item:hover {
     opacity: 1;
 }
@@ -112,15 +127,17 @@ header {
     transition: opacity 0.4s ease;
 }
 
+/* Жесткое скрытие элементов для корректной работы фильтра */
 .video-item.hidden {
-    display: none;
+    display: none !important;
 }
 
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-    background: #111;
+    background: #000;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .video-wrapper iframe {
@@ -133,18 +150,19 @@ header {
 
 .video-title {
     margin-top: 15px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
+    font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-main);
 }
 
-/* Раздел Обо мне */
 .about-section {
-    background-color: #0a0a0a;
     padding: 120px 5%;
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .about-container {
@@ -154,8 +172,9 @@ header {
 }
 
 .section-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 48px;
+    font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 40px;
     margin-top: 0;
@@ -171,14 +190,14 @@ header {
 }
 
 .clients-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
+    font-weight: 500;
     letter-spacing: 2px;
     color: var(--text-muted);
     margin-bottom: 50px;
 }
 
-/* Сетка логотипов (Как в кино) */
 .clients-grid {
     display: flex;
     flex-wrap: wrap;
@@ -188,9 +207,9 @@ header {
 }
 
 .credit-logo {
-    filter: brightness(0) invert(1); /* Делает всё белым */
-    max-height: 40px; /* Строго одинаковая высота для всех */
-    max-width: 160px; /* Ограничение по ширине для слишком длинных лого */
+    filter: brightness(0) invert(1);
+    max-height: 40px;
+    max-width: 160px;
     object-fit: contain;
     opacity: 0.6;
     transition: opacity 0.3s ease;
@@ -200,14 +219,14 @@ header {
     opacity: 1;
 }
 
-/* Подвал (Швейцарский стиль) */
 .site-footer {
     display: flex;
     justify-content: flex-start;
     gap: 15vw;
     padding: 100px 5% 100px 5%;
-    background-color: var(--bg-color);
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-column {
@@ -234,6 +253,14 @@ header {
     text-decoration: none;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+}
+
+/* Класс для выравнивания иконки и текста по одной линии */
+.flex-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: lowercase;
 }
 
 .footer-link:hover {
