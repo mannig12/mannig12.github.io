@@ -5,8 +5,8 @@
 }
 
 body {
-    /* Радиальный градиент: от светлого центра к черным краям */
-    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    /* Гладкий радиальный градиент: черный центр и мягкий графитово-теплый край */
+    background: radial-gradient(circle at center, #000000 30%, #1c1816 100%);
     background-attachment: fixed;
     color: var(--text-main);
     font-family: 'Manrope', sans-serif;
@@ -16,17 +16,9 @@ body {
     position: relative;
 }
 
-/* Эффект пленочного шума */
+/* Полностью отключаем пиксельный шум */
 .film-grain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.04;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    display: none !important;
 }
 
 header {
@@ -255,7 +247,6 @@ header {
     transition: color 0.3s ease;
 }
 
-/* Класс для выравнивания иконки и текста по одной линии */
 .flex-link {
     display: flex;
     align-items: center;
