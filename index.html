@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магомед Гаджиев | Режиссер и Креативный продюсер</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --accent-color: #555;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 120px 5% 80px 5%;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #hero {
+            min-height: 100vh;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 1;
+            margin: 0 0 20px 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Список работ */
+        .work-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .work-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 25px 0;
+            border-bottom: 1px solid #222;
+            transition: padding-left 0.3s ease;
+        }
+
+        .work-item:hover {
+            padding-left: 20px;
+        }
+
+        .work-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .work-role {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Бренды */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            align-items: center;
+            opacity: 0.7;
+        }
+        
+        .brand-name {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* Обо мне */
+        .about-content {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #ccc;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Контакты */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        footer {
+            padding: 40px 5%;
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>МАГОМЕД ГАДЖИЕВ</div>
+        <nav>
+            <a href="#works">Работы</a>
+            <a href="#brands">Бренды</a>
+            <a href="#about">Обо мне</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Магомед<br>Гаджиев</h1>
+        <div class="subtitle">Режиссер / Креативный продюсер</div>
+    </section>
+
+    <section id="works">
+        <h2>Избранные проекты</h2>
+        <ul class="work-list">
+            <li class="work-item">
+                <span class="work-title">д/с Русские народные: вся правда о сказках (2025)</span>
+                <span class="work-role">Режиссер / Креативный продюсер</span>
+            </li>
+            <li class="work-item">
+                <span class="work-title">д/с История русского секса (2026)</span>
+                <span class="work-role">Исполнительный продюсер</span>
+            </li>
+            <li class="work-item">
+                <span class="work-title">Кама FORZA (2024)</span>
+                <span class="work-role">Режиссер / Креатив</span>
+            </li>
+            <li class="work-item">
+                <span class="work-title">Ma vie clinique (2024)</span>
+                <span class="work-role">Режиссер / Продюсер</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="brands">
+        <h2>Сотрудничество</h2>
+        <div class="brands-grid">
+            <div class="brand-name">Сбер</div>
+            <div class="brand-name">ОККО</div>
+            <div class="brand-name">Уралхим</div>
+            <div class="brand-name">Tekta Group</div>
+            <div class="brand-name">Группа НЭК</div>
+            <div class="brand-name">Robber Baron</div>
+            <div class="brand-name">Ma vie Clinique</div>
+            <div class="brand-name">Кортрос</div>
+            <div class="brand-name">КАМА</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Обо мне</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Креативный продюсер и режиссер с опытом управления полным циклом создания видео: от разработки концепции до финальной сдачи. Успешно руковожу командами до 30 человек, выстраиваю четкие процессы и оптимизирую бюджеты.</p>
+                
+                <p>Мой профессиональный фокус — проекты, полностью построенные на ИИ-анимации и сложной компьютерной графике, исключающие традиционные натурные съемки. Я убежден, что фундаментальная наука и современные технологии должны пересекаться с реальным производством и бизнесом, решая конкретные, осязаемые задачи.</p>
+                
+                <p>Мои проекты участвовали и побеждали на таких фестивалях, как Original+ Doc, «Пилот», «Послание к человеку» и WOW awards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Связь</h2>
+        <div class="contact-links">
+            <a href="mailto:mannigmovie@gmail.com">mannigmovie@gmail.com</a>
+            <a href="tel:+79670085003">+7 (967) 008 50 03</a>
+            <a href="https://t.me/mannig21" target="_blank">Telegram: @mannig21</a>
+        </div>
+        <div class="social-links">
+            <a href="https://vimeo.com/mannig" target="_blank">Vimeo</a>
+            <a href="https://www.kinopoisk.ru/name/10202247/" target="_blank">Кинопоиск</a>
+            <a href="https://okko.tv/person/magomed-gadzhiev" target="_blank">Okko</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Магомед Гаджиев
+    </footer>
+
+</body>
+</html>
