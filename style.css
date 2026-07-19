@@ -1,0 +1,114 @@
+body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 40px;
+}
+.header-info .logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.header-info .roles {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #888;
+    font-weight: normal;
+}
+#lang-switch {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+#lang-switch:hover {
+    background: #fff;
+    color: #000;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+.video-item {
+    display: flex;
+    flex-direction: column;
+}
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Пропорция 16:9 */
+    height: 0;
+    background: #1a1a1a;
+    overflow: hidden;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-title {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.about-section {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 80px;
+    border-top: 1px solid #333;
+    padding-top: 40px;
+}
+.white-logo {
+    filter: brightness(0) invert(1);
+    max-height: 40px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.white-logo:hover {
+    opacity: 1;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+}
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #fff;
+}
+.contacts, .social-links {
+    display: flex;
+}
