@@ -1,83 +1,80 @@
 :root {
     --bg-color: #050505;
     --text-main: #ffffff;
-    --text-muted: #888888;
-    --accent: #333333;
+    --text-muted: #777777;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 
+/* Шапка сайта */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 5%;
-    position: sticky;
-    top: 0;
-    background: rgba(5, 5, 5, 0.9);
-    backdrop-filter: blur(10px);
+    background: var(--bg-color);
     z-index: 100;
 }
 
 .header-info .logo {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .header-info .roles {
     margin: 5px 0 0 0;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--text-muted);
-    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 #lang-switch {
     background: transparent;
-    border: 1px solid var(--text-muted);
-    color: var(--text-main);
-    padding: 8px 16px;
+    border: none;
+    color: var(--text-muted);
     cursor: pointer;
-    font-size: 12px;
-    font-family: 'Space Grotesk', sans-serif;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
 #lang-switch:hover {
-    background: var(--text-main);
-    color: var(--bg-color);
+    color: var(--text-main);
 }
 
+/* Фильтры (строгий текст) */
 .filters {
-    padding: 0 5% 40px 5%;
+    padding: 20px 5% 60px 5%;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .filter-btn {
     background: none;
     border: none;
     color: var(--text-muted);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    padding: 0;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
@@ -87,21 +84,24 @@ header {
 
 .filter-btn.active {
     color: var(--text-main);
-    border-bottom: 2px solid var(--text-main);
+    border-bottom: 1px solid var(--text-main);
 }
 
+/* Сетка видео и эффект затемнения */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 40px;
+    gap: 50px;
     padding: 0 5% 100px 5%;
     transition: opacity 0.3s ease;
 }
 
+/* При наведении на саму сетку затемняем все видео */
 .video-grid:hover .video-item {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
+/* Возвращаем яркость только тому видео, на которое навели курсор */
 .video-grid .video-item:hover {
     opacity: 1;
 }
@@ -109,7 +109,7 @@ header {
 .video-item {
     display: flex;
     flex-direction: column;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease;
 }
 
 .video-item.hidden {
@@ -121,7 +121,6 @@ header {
     padding-bottom: 56.25%;
     background: #111;
     overflow: hidden;
-    border-radius: 4px;
 }
 
 .video-wrapper iframe {
@@ -134,142 +133,119 @@ header {
 
 .video-title {
     margin-top: 15px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--text-main);
 }
 
+/* Раздел Обо мне */
 .about-section {
-    background-color: #111;
-    padding: 100px 5%;
-    border-top: 1px solid var(--accent);
+    background-color: #0a0a0a;
+    padding: 120px 5%;
+    border-top: 1px solid #1a1a1a;
 }
 
 .about-container {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .section-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
     margin-top: 0;
-    color: var(--text-main);
 }
 
 .about-description {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #cccccc;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #bbbbbb;
     font-weight: 300;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .clients-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
     letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 50px;
 }
 
-.clients {
+/* Сетка логотипов (Как в кино) */
+.clients-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
-.white-logo {
-    filter: brightness(0) invert(1);
-    max-height: 45px;
-    opacity: 0.4;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.credit-logo {
+    filter: brightness(0) invert(1); /* Делает всё белым */
+    max-height: 40px; /* Строго одинаковая высота для всех */
+    max-width: 160px; /* Ограничение по ширине для слишком длинных лого */
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
-.white-logo:hover {
+.credit-logo:hover {
     opacity: 1;
-    transform: scale(1.05);
 }
 
-footer {
-    padding: 120px 5% 80px 5%;
-    background-color: var(--bg-color);
-}
-
-.footer-content {
+/* Подвал (Швейцарский стиль) */
+.site-footer {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15vw;
+    padding: 100px 5% 100px 5%;
+    background-color: var(--bg-color);
+    border-top: 1px solid #1a1a1a;
 }
 
-.footer-heading {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.big-contacts {
+.footer-column {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 60px;
 }
 
-.big-link {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 4vw;
-    font-weight: 700;
+.footer-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     color: var(--text-main);
     text-decoration: none;
-    line-height: 1;
+    letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
-.big-link:hover {
+.footer-link:hover {
     color: var(--text-muted);
 }
 
-.social-pills {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.pill {
-    padding: 12px 24px;
-    border: 1px solid var(--accent);
-    border-radius: 30px;
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.pill:hover {
-    background-color: var(--text-main);
-    color: var(--bg-color);
-}
-
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
     .video-grid {
         grid-template-columns: 1fr;
     }
-    .big-link {
-        font-size: 32px;
+    .site-footer {
+        flex-direction: column;
+        gap: 50px;
     }
 }
