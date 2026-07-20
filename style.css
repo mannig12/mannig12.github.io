@@ -5,23 +5,15 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    
     color: var(--text-main);
     font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     position: relative;
-}
-
-.film-grain {
-    display: none !important;
+    min-height: 100vh;
 }
 
 header {
@@ -192,35 +184,36 @@ header {
     margin-bottom: 50px;
 }
 
+/* Оптическое выравнивание сетки логотипов */
 .clients-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px 65px; /* Строгий зазор между краями изображений */
 }
 
 .credit-logo {
     filter: brightness(0) invert(1);
-    max-height: 40px;
-    max-width: 160px;
-    object-fit: contain;
     opacity: 0.6;
     transition: opacity 0.3s ease;
+    object-fit: contain;
+    width: auto;
 }
 
 .credit-logo:hover {
     opacity: 1;
 }
 
-/* Визуальная компенсация для нестандартных пропорций */
-.logo-okko {
-    max-height: 55px; /* Делаем квадратный логотип крупнее */
-}
-
-.logo-kortros {
-    max-height: 80px; /* Существенно увеличиваем узкий вертикальный логотип */
-}
+/* Точечная корректировка высоты под форму каждого логотипа, чтобы масса была равной */
+.logo-sber { height: 28px; }
+.logo-okko { height: 38px; }
+.logo-kortros { height: 75px; }
+.logo-tekta { height: 22px; }
+.logo-robber { height: 45px; }
+.logo-kama { height: 24px; }
+.logo-uralchem { height: 28px; }
+.logo-nek { height: 32px; }
 
 .site-footer {
     display: flex;
