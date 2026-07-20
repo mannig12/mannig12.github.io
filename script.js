@@ -34,88 +34,41 @@ const translations = {
 let currentLang = 'ru';
 const langBtn = document.getElementById('lang-switch');
 
-// Функция обновления текста
 function updateLanguage() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
+        if (translations[currentLang] && translations[currentLang][key]) {
             element.textContent = translations[currentLang][key];
         }
     });
     langBtn.textContent = currentLang === 'ru' ? 'EN' : 'RU';
 }
 
-// Принудительно применяем язык при первой загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     updateLanguage();
+    
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const videoItems = document.querySelectorAll('.video-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            videoItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
 });
 
-// Переключение по клику
 langBtn.addEventListener('click', () => {
     currentLang = currentLang === 'ru' ? 'en' : 'ru';
     updateLanguage();
-});
-
-// Логика фильтров
-const filterBtns = document.querySelectorAll('.filter-btn');
-const videoItems = document.querySelectorAll('.video-item');
-
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Убираем активный класс у всех кнопок
-        filterBtns.forEach(b => b.classList.remove('active'));
-        // Добавляем нажатой кнопке
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        videoItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
-        });
-    });
-});// Функция обновления текста
-function updateLanguage() {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
-        }
-    });
-    langBtn.textContent = currentLang === 'ru' ? 'EN' : 'RU';
-}
-
-// Принудительно применяем язык при первой загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-    updateLanguage();
-});
-
-// Переключение по клику
-langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'ru' ? 'en' : 'ru';
-    updateLanguage();
-});
-
-// Логика фильтров
-const filterBtns = document.querySelectorAll('.filter-btn');
-const videoItems = document.querySelectorAll('.video-item');
-
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        videoItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
-        });
-    });
 });
