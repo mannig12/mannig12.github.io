@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Приписка ?v=3 гарантированно сбросит кэш старого дизайна -->
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <header>
@@ -142,16 +143,16 @@
                 <p data-i18n="about_text" class="about-description">Режиссер и креативный продюсер. Веду полный цикл производства: от концепции до сдачи клиенту. Работал с OKKO, СБЕР, Кортрос, Tekta Group и топовыми агентствами. Управляю большими командами и крупными бюджетами, координирую проекты с высоким объемом CGI/VFX. Создаю работы с использованием ИИ, но всегда отдаю предпочтение реальным натурным съемкам и практическим эффектам — именно они делают кино живым. Мои проекты участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).</p>
                 
                 <h3 class="clients-title" data-i18n="clients_title">КЛИЕНТЫ</h3>
-                <!-- Добавлены уникальные классы для OKKO и Kortros -->
                 <div class="clients-grid">
-                    <img src="sber.png" class="credit-logo" alt="Sber">
+                    <!-- Убраны боксы, применены классы оптического выравнивания -->
+                    <img src="sber.png" class="credit-logo logo-sber" alt="Sber">
                     <img src="okko.png" class="credit-logo logo-okko" alt="OKKO">
                     <img src="kortros.png" class="credit-logo logo-kortros" alt="Kortros">
-                    <img src="tekta.png" class="credit-logo" alt="Tekta">
-                    <img src="robber-baron.png" class="credit-logo" alt="Robber Baron">
-                    <img src="kama.png" class="credit-logo" alt="KAMA">
-                    <img src="uralchem.png" class="credit-logo" alt="Uralchem">
-                    <img src="nek.png" class="credit-logo" alt="NEK">
+                    <img src="tekta.png" class="credit-logo logo-tekta" alt="Tekta">
+                    <img src="robber-baron.png" class="credit-logo logo-robber" alt="Robber Baron">
+                    <img src="kama.png" class="credit-logo logo-kama" alt="KAMA">
+                    <img src="uralchem.png" class="credit-logo logo-uralchem" alt="Uralchem">
+                    <img src="nek.png" class="credit-logo logo-nek" alt="NEK">
                 </div>
             </div>
         </section>
@@ -179,6 +180,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Приписка ?v=3 сбросит кэш старого скрипта -->
+    <script src="script.js?v=3"></script>
 </body>
 </html>
