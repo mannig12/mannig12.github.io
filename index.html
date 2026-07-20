@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Gadzhiev | Director & Producer</title>
-    <!-- Заменили Bebas на Oswald для идеальной кириллицы, Manrope оставили -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Пленочный шум (создается через CSS) -->
-    <div class="film-grain"></div>
-
     <header>
         <div class="header-info">
             <h1 class="logo" data-i18n="name">МАГОМЕД ГАДЖИЕВ</h1>
@@ -143,13 +139,14 @@
         <section class="about-section">
             <div class="about-container">
                 <h2 class="section-title" data-i18n="about_title">ОБО МНЕ</h2>
-                <p data-i18n="about_text" class="about-description">Веду полный цикл производства: от концепции и брифа до финальной сдачи клиенту и платформе. Работал с OKKO, СБЕР, Кортрос, Tekta Group, ведущими рекламными агентствами и продакшнами. Управляю большими командами и крупными бюджетами. Специализируюсь на координации проектов с высоким объёмом CGI/VFX. Мои проекты — это исключительно ИИ-анимация без натурных съемок, обеспечивающая связь передовых технологий с реальным производством и бизнесом. Работы участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).</p>
+                <p data-i18n="about_text" class="about-description">Режиссер и креативный продюсер. Веду полный цикл производства: от концепции до сдачи клиенту. Работал с OKKO, СБЕР, Кортрос, Tekta Group и топовыми агентствами. Управляю большими командами и крупными бюджетами, координирую проекты с высоким объемом CGI/VFX. Создаю работы с использованием ИИ, но всегда отдаю предпочтение реальным натурным съемкам и практическим эффектам — именно они делают кино живым. Мои проекты участвовали и побеждали в фестивалях (Original+ Doc, «Пилот», «Послание к человеку», WOW awards).</p>
                 
                 <h3 class="clients-title" data-i18n="clients_title">КЛИЕНТЫ</h3>
+                <!-- Добавлены уникальные классы для OKKO и Kortros -->
                 <div class="clients-grid">
                     <img src="sber.png" class="credit-logo" alt="Sber">
-                    <img src="okko.png" class="credit-logo" alt="OKKO">
-                    <img src="kortros.png" class="credit-logo" alt="Kortros">
+                    <img src="okko.png" class="credit-logo logo-okko" alt="OKKO">
+                    <img src="kortros.png" class="credit-logo logo-kortros" alt="Kortros">
                     <img src="tekta.png" class="credit-logo" alt="Tekta">
                     <img src="robber-baron.png" class="credit-logo" alt="Robber Baron">
                     <img src="kama.png" class="credit-logo" alt="KAMA">
