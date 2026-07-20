@@ -5,14 +5,9 @@
 }
 
 body {
-    /* Используем вашу картинку с идеальным зерном как фон */
-    background-color: var(--bg-color);
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
+    /* Гладкий радиальный градиент: глубокий черный в центре, мягкий графит по краям */
+    background: radial-gradient(circle at center, #000000 30%, #1c1816 100%);
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    
     color: var(--text-main);
     font-family: 'Manrope', sans-serif;
     margin: 0;
@@ -21,7 +16,7 @@ body {
     position: relative;
 }
 
-/* Программный пиксельный шум отключаем за ненадобностью */
+/* Отключаем шум, если он остался в HTML */
 .film-grain {
     display: none !important;
 }
