@@ -5,7 +5,6 @@
 }
 
 body {
-    /* Гладкий радиальный градиент: глубокий черный в центре, мягкий графит по краям */
     background: radial-gradient(circle at center, #000000 30%, #1c1816 100%);
     background-attachment: fixed;
     color: var(--text-main);
@@ -16,7 +15,6 @@ body {
     position: relative;
 }
 
-/* Отключаем шум, если он остался в HTML */
 .film-grain {
     display: none !important;
 }
@@ -105,11 +103,12 @@ header {
     z-index: 10;
 }
 
-.video-grid:hover .video-item {
+/* Новая, правильная логика затемнения */
+.video-grid:has(.video-item:hover) .video-item {
     opacity: 0.3;
 }
 
-.video-grid .video-item:hover {
+.video-grid:has(.video-item:hover) .video-item:hover {
     opacity: 1;
 }
 
